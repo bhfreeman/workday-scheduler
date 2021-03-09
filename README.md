@@ -1,5 +1,35 @@
 # workday-scheduler
 
+# Description
+```md
+A simple app to help plan your workday. Enter your info into the text are and hit the save button for that info to stay for reload.
+```md
+
+# Github Link
+ https://github.com/bhfreeman/workday-scheduler
+
+
+# Github Pages Link
+ https://bhfreeman.github.io/workday-scheduler/
+
+
+# App screen shot
+![](./assets/images/app_screen_shot.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Your Task
 
 Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
