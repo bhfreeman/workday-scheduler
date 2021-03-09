@@ -18,9 +18,11 @@ function createTimeBlock(i) {
   var hourBlock = $("<div>");
   var textBlock = $("<textarea>");
   var saveBlock = $("<button>");
+  var num = i;
+  var hour = moment(num.toString(),"h").format('hA');
 
   timeBlock.addClass("row time-block");
-  hourBlock.addClass("hour col-md-1").append(i);
+  hourBlock.addClass("hour col-md-1").append(hour);
   textBlock.addClass("col-md-10 description").attr("id", i);
   saveBlock
     .addClass("btn saveBtn col-md-1")
@@ -36,4 +38,20 @@ function createTimeBlock(i) {
   } else {
     textBlock.addClass("future");
   }
+
+  $('.description').each(function () {
+      var id = $(this).attr('id');
+      var storedDescription = localStorage.getItem(id);
+      $(this).val(storedDescription);
+  })
+
 }
+
+$('.saveBtn').on("click", function () {
+    var id = $(this).siblings("textarea").attr("id");
+    var description = $(this).siblings('textarea').val();
+    localStorage.setItem(id, description);
+    console.log(id);
+    console.log(description);
+    console.log($(this).siblings());
+})
